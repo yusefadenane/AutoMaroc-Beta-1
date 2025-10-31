@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoMaroc – Beta 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="assets/AutoMaroc_logo.png" alt="AutoMaroc logo"></div>
+    <div class="controls">
+      <select id="citySelect" aria-label="Select city"></select>
+      <select id="langSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+      </select>
+      <select id="currencySelect" aria-label="Select currency">
+        <option value="MAD">MAD</option>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 id="heroTitle"></h1>
+        <p id="heroSubtitle"></p>
+        <button id="findBtn" class="cta"></button>
+      </div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <h2 id="resultsTitle"></h2>
+      <div id="carsList" class="cards"></div>
+    </section>
+
+    <section id="agency" class="agency hidden">
+      <button id="backBtn" class="back">&larr; <span id="backLabel"></span></button>
+      <div class="agency-content">
+        <div class="agency-gallery" id="agencyGallery"></div>
+        <div class="agency-info">
+          <h3 id="agencyName"></h3>
+          <p id="agencyDesc"></p>
+          <p><strong id="agencyContactLabel"></strong>: <a id="agencyPhone" href="#"></a></p>
+          <button id="bookNow" class="cta"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="feedback hidden">
+      <h2 id="feedbackTitle"></h2>
+      <form id="feedbackForm">
+        <label id="feedbackLabelName"></label>
+        <input id="fbName" type="text" required />
+        <label id="feedbackLabelMsg"></label>
+        <textarea id="fbMsg" rows="4" required></textarea>
+        <button type="submit" class="cta"></button>
+      </form>
+      <div id="fbThanks" class="hidden"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small id="footerText"></small>
+    <button id="feedbackOpen" class="link-btn"></button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
